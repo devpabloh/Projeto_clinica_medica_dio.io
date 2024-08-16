@@ -18,6 +18,6 @@ HTML
 
 CSS
 
-
+No css foi utilizado a abordagem de design e desenvolvimento web chamada mobile first, no qual primeiro desenvolvemos para mobile / celular ou pequenas telas.
 
 Javascript

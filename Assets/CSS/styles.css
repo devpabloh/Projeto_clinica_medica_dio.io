@@ -1,0 +1,185 @@
+/* Mobile First */
+
+body{
+    background-color: #F0F5F7;
+}
+
+.container_menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    
+}
+
+.container_logo{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2.5em;
+    z-index: 2;
+}
+
+.container_logo h1{
+    color: deeppink;
+}
+
+.container_logo span{
+    color: rgb(19, 127, 234);
+}
+
+.logo_menu{
+    height: 50px;
+    cursor: pointer; /* Adicionamos um cursor ponteiro para demonstrar que é clicável */
+    z-index: 2; /* colocamos para que a logo fique em cima do menu */
+    border-radius: 50%;
+}
+
+.menu_hamburguer{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer; /* Adicionamos um cursor ponteiro para demonstrar que é clicável */
+    z-index: 2;
+}
+
+.menu_hamburguer .bar{
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    transition: .4s;
+}
+
+.container_nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0; /* Para deixar a posição do menu do lado esquerdo */
+    top: 0;
+    height: 148vh;
+    width: 50%; /* Aqui podemos colocar a largura que queremos na parte da navegação */
+    background-color: greenyellow;
+    transform: translatex(-100%); /* Esse códgio é para a gente esconder o menu a esquerda da tela */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.container_nav li:nth-child(1){
+    margin-top: 5em;
+}
+
+.container_nav li{
+    margin: 10px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container_nav li:hover{
+    background-color: rgb(140, 214, 28);
+    border-radius: .5em;
+}
+
+.container_nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Animação para icone de hamburguer */
+
+.menu_hamburguer.toggle .bar:nth-child(1){
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.menu_hamburguer.toggle .bar:nth-child(2){
+    opacity: 0;
+}
+
+.menu_hamburguer.toggle .bar:nth-child(3){
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.container_nav.active{
+    transform: translatex(0);
+    box-shadow: 7px 4px 9px 0px rgba(0,0,0,0.58);
+    -webkit-box-shadow: 7px 4px 9px 0px rgba(0,0,0,0.58);
+    -moz-box-shadow: 7px 4px 9px 0px rgba(0,0,0,0.58);
+    z-index: 1;
+    
+}
+
+body h1{
+    text-align: center;
+}
+
+.container_especialidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list_especialidades{
+    border-radius: .8em;
+}
+
+.container_especialidades h2{
+    margin-bottom: .8em;
+}
+
+.container_especialidades h2{
+    text-align: center;
+
+}
+
+div.especialidade{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFF;
+    width: 330px;
+    height: 40vh;
+    border-radius: .5em;
+    margin-bottom: .5em;
+    font-size: 1.2em;
+}
+
+div.especialidade a{
+    text-decoration: none;
+}
+
+div.especialidade p strong{
+    color: rgb(19, 127, 234);
+}
+
+div.especialidade a{
+    color: deeppink;
+    
+}
+
+.button_consulta{
+    background-color: greenyellow;
+    border-radius: 2em;
+    width: 80%;
+    padding: 1.2em;
+}
+
+@media (min-width: 769px) {
+    .menu_hamburguer{
+        display: none;
+    }
+
+    .container_nav{
+        display: flex;
+        flex-direction: row;
+        position: static;
+        height: auto;
+        width: auto;
+        transform: none;
+    }
+}
+
+
